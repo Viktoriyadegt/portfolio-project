@@ -9,7 +9,7 @@ export default tseslint.config(
     {ignores: ['dist']},
 
     {
-        extends: [js.configs.recommended, ...tseslint.configs.recommendedTypeChecked, ...tseslint.configs.stylisticTypeChecked],
+        extends: [js.configs.recommended, ...tseslint.configs.recommendedTypeChecked, tseslint.configs.stylisticTypeChecked],
         files: ['**/*.{ts,tsx}'],
         languageOptions: {
             ecmaVersion: 2020,
@@ -24,6 +24,7 @@ export default tseslint.config(
             'react-hooks': reactHooks,
             'react-refresh': reactRefresh,
             react
+
         },
         rules: {
             ...reactHooks.configs.recommended.rules,

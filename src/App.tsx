@@ -9,7 +9,7 @@ import {Slogan} from "./layout/sections/slogan/Slogan";
 import {Footer} from "./layout/footer/Footer";
 
 
-function App() {
+export function App() {
     return (
         <div className="App">
             <Header/>
@@ -24,5 +24,5 @@ function App() {
     );
 }
 
-export default App;
+
 

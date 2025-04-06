@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
-interface Props {
-    items: string[]
+type Props = {
+    items: String[]
 }
 
 

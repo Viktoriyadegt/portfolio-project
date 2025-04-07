@@ -7,6 +7,7 @@ export const Link = styled.a`
     letter-spacing: 1px;
     text-transform: uppercase;
     padding: 10px;
+    color: ${theme.colors.font};
 
     position: relative;
     z-index: 0;

@@ -22,9 +22,10 @@ export const GlobalStyled= createGlobalStyle`
         line-height: 1.2;
     }
 
+    
     a {
         text-decoration: none;
-        color: ${theme.colors.font};
+        color: ${theme.colors.primaryBg};
     }
 
     ul {

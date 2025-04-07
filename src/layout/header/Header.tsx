@@ -4,7 +4,7 @@ import {Container} from "../../components/Container";
 import {FlexContainer} from "../../components/FlexContainer";
 import {HeaderMenu} from "./headerMenu/HeaderMenu";
 
-const menuItems: Array<String> = ['HOME', 'SKILLS', 'WORKS', 'TESTIMONY', 'CONTACTS']
+const menuItems: Array<string> = ['HOME', 'SKILLS', 'WORKS', 'TESTIMONY', 'CONTACTS']
 
 export const Header = () => {
     return (

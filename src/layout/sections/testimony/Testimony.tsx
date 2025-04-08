@@ -3,6 +3,7 @@ import {SectionTitle} from "../../../components/SectionTitle";
 import {FlexContainer} from "../../../components/FlexContainer";
 import {Slider} from "../../../components/slider/Slider";
 import {Icon} from "../../../components/icon/Icon";
+import {IconWrapper} from "../skills/skill/Skill.tsx";
 
 
 export const Testimony = () => {
@@ -11,7 +12,9 @@ export const Testimony = () => {
 
             <SectionTitle>Testimony</SectionTitle>
             <FlexContainer direction={'column'} align={'center'}>
-                <Icon iconId={'quote'}/>
+                <IconWrapper>
+                    <Icon iconId={'quote'}/>
+                </IconWrapper>
                 <Slider/>
             </FlexContainer>
 
@@ -22,4 +25,8 @@ export const Testimony = () => {
 const StiledTestimony = styled.section`
     background-color: rgba(169, 152, 213, 0.77);
     min-height: 50vh;
+
+    ${IconWrapper} {
+        margin: 40px 0 60px;
+    }
 `

@@ -1,13 +1,14 @@
 import styled from "styled-components";
 import {Icon} from "../../components/icon/Icon";
 import {FlexContainer} from "../../components/FlexContainer";
+import {theme} from "../../styles/Theme.ts";
 
 
 export const Footer = () => {
     return (
         <StiledFooter>
             <FlexContainer direction={'column'} align={'center'}>
-                <Name>Svetlana</Name>
+                <Name>Victoria</Name>
                 <SocialList>
                     <SocialItem>
                         <SocialLink>
@@ -30,7 +31,7 @@ export const Footer = () => {
                         </SocialLink>
                     </SocialItem>
                 </SocialList>
-                <Copyright>© 2023 Svetlana Dyablo, All Rights Reserved.</Copyright>
+                <Copyright>© 2023 Victoria Degtyareva, All Rights Reserved.</Copyright>
             </FlexContainer>
         </StiledFooter>
     )
@@ -38,17 +39,22 @@ export const Footer = () => {
 };
 
 const StiledFooter = styled.footer`
-    background-color: rgba(175, 232, 200, 0.93);
-    min-height: 50vh;
+    background-color:${theme.colors.primaryBg};
+    padding: 40px 0;
 `
 
 const Name = styled.span`
+    font-family: Josefin Sans, sans-serif;
+    font-weight: 700;
+    font-size: 22px;
+    letter-spacing: 3px;
 
 `
 
 const SocialList = styled.ul`
     display: flex;
-    gap: 30px;
+    gap: 20px;
+    margin: 30px 0;
 `
 
 const SocialItem = styled.li`
@@ -56,9 +62,26 @@ const SocialItem = styled.li`
 `
 
 const SocialLink = styled.a`
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: ${theme.colors.accent};
+    
+    &:hover {
+        color: ${theme.colors.primaryBg};
+        background-color: ${theme.colors.accent};
+        transform: translateY(-4px);
+    }
 
 `
 
-const Copyright = styled.span`
-
+const Copyright = styled.small`
+    font-weight: 400;
+    font-size: 12px;
+    text-align: center;
+    opacity: 0.5;
 `

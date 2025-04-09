@@ -1,37 +1,64 @@
 import styled from "styled-components";
 import {SectionTitle} from "../../../components/SectionTitle";
 import {Button} from "../../../components/Button";
+import {Container} from "../../../components/Container.tsx";
+import {theme} from "../../../styles/Theme.ts";
 
 
 export const Contact = () => {
     return (
         <StiledContact>
-            <SectionTitle>Contact</SectionTitle>
-            <StyledForm>
-                <Field placeholder={'name'}/>
-                <Field placeholder={'subject'}/>
-                <Field placeholder={'message'} as={'textarea'}/>
-                <Button>SEND MESSAGE</Button>
-            </StyledForm>
-
+            <Container>
+                <SectionTitle>Contact</SectionTitle>
+                <StyledForm>
+                    <Field placeholder={'name'}/>
+                    <Field placeholder={'subject'}/>
+                    <Field placeholder={'message'} as={'textarea'}/>
+                    <Button>SEND MESSAGE</Button>
+                </StyledForm>
+            </Container>
         </StiledContact>
     );
 };
 
 const StiledContact = styled.section`
-    background-color: rgba(226, 232, 175, 0.93);
-    min-height: 50vh;
+   
 `
 
+const Field = styled.input`
+    width: 100%;
+    font-family: Poppins, sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    color: ${theme.colors.font};
+    letter-spacing: 0.05em;
+    background-color: ${theme.colors.secondaryBg};
+    border: 1px solid ${theme.colors.borderColor};
+    padding: 7px 15px;
+
+
+    &::placeholder {
+        color: ${theme.colors.plaseholderColor};
+        text-transform: capitalize;
+    }
+    
+
+    &:focus-visible{
+        outline: 1px solid ${theme.colors.borderColor};
+    }
+`
 const StyledForm = styled.form`
-    max-width: 500px;
+    max-width: 540px;
     width: 100%;
     display: flex;
     flex-direction: column;
+    align-items: center;
     margin: 0 auto;
-    gap: 10px
+    gap: 16px;
 
-`
-const Field = styled.input`
+    textarea {
+    resize: none;
+    height: 155px;
+}
 
 `

@@ -1,19 +1,23 @@
 import styled from "styled-components";
 import {SectionTitle} from "../../../components/SectionTitle";
 import {Button} from "../../../components/Button";
+import {Container} from "../../../components/Container.tsx";
+import {FlexContainer} from "../../../components/FlexContainer.tsx";
 
 
 export const Slogan = () => {
     return (
         <StiledSlogan>
-            <SectionTitle>I Am Available For Freelance</SectionTitle>
-            <Button>HIRE ME</Button>
+            <Container>
+                <FlexContainer direction={'column'} align={'center'}>
+                    <SectionTitle>I Am Available For Freelance</SectionTitle>
+                    <Button>HIRE ME</Button>
+                </FlexContainer>
+            </Container>
         </StiledSlogan>
     );
 };
 
 const StiledSlogan = styled.section`
-    background-color: rgb(204, 160, 221);
-    min-height: 30vh;
-    text-align: center;
+
 `

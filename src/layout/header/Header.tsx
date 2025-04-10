@@ -3,16 +3,20 @@ import {Logo} from "../../components/logo/Logo";
 import {Container} from "../../components/Container";
 import {FlexContainer} from "../../components/FlexContainer";
 import {HeaderMenu} from "./headerMenu/HeaderMenu";
+import {MobileMenu} from "./mobileMenu/MobileMenu.tsx";
+
 
 const menuItems: Array<string> = ['HOME', 'SKILLS', 'WORKS', 'TESTIMONY', 'CONTACTS']
 
 export const Header = () => {
+
     return (
         <StyledHeader>
             <Container>
                 <FlexContainer justify="space-between" align="center">
                     <Logo/>
-                    <HeaderMenu items={menuItems}/>
+                    <HeaderMenu items={menuItems}  />
+                    <MobileMenu items={menuItems}/>
                 </FlexContainer>
             </Container>
         </StyledHeader>

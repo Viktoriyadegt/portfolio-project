@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import {theme} from "../../../styles/Theme";
 
+
 type Props = {
     items: Array<string>
 }
@@ -29,6 +30,10 @@ const StyledHeaderMenu = styled.nav`
         display: flex;
         gap: 30px;
         justify-content:center;
+    }
+    
+    @media ${theme.media.tablet} {
+        display: none;
     }
 `
 
@@ -81,7 +86,6 @@ const ListItem = styled.li`
 
 
     &:hover {
-        
 
         &::before {
             transform: scale(1);

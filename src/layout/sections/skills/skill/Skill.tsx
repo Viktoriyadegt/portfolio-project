@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import {Icon} from "../../../../components/icon/Icon";
 import {FlexContainer} from "../../../../components/FlexContainer.tsx";
+import {theme} from "../../../../styles/Theme.ts";
 
 type Props = {
     iconId: string
@@ -24,8 +25,13 @@ export const Skill = ({iconId, title, description}: Props) => {
 };
 
 const StyledSkill = styled.div`
-    width: 380px;
+    width: 330px;
+    flex-grow: 1;
     padding: 62px 20px 40px;
+
+    @media ${theme.media.mobile} {
+        padding: 62px 0 40px;
+    }
 `
 const StiledSkillTitle = styled.h3`
     margin: 70px 0 15px;

@@ -28,6 +28,6 @@ const StiledTestimony = styled.section`
     min-height: 50vh;
 
     ${IconWrapper} {
-        margin: 40px 0 60px;
+        margin: 32px 0 70px;
     }
 `

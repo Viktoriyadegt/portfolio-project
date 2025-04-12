@@ -116,6 +116,6 @@ const StiledTitle = styled.h3`
 
 `
 const StiledText = styled.p`
-margin: 14px 0 10px;
+margin: 14px 0 16px;
 `
 

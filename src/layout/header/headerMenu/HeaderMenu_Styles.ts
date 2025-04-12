@@ -1,40 +1,21 @@
 import styled, {css} from "styled-components";
-import {theme} from "../../../styles/Theme";
+import {theme} from "../../../styles/Theme.ts";
 
-type Props = {
-    items: Array<string>
-}
+// desktopMenu
 
-
-export const MobileMenu = ({items}: Props) => {
-
-    return (
-        <StyledMobileMenu>
-            <BurgerButton isOpen={false}>
-                <span></span>
-            </BurgerButton>
-            <MobileMenuPopup isOpen={false}>
-                <ul>
-                    {items?.map((item, index) => {
-                        return <ListItem key={index}>
-                            <Link href="">
-                                {item}
-                                <Mask><span>{item}</span></Mask>
-                                <Mask><span>{item}</span></Mask>
-                            </Link>
-                        </ListItem>
-                    })}
-                </ul>
-            </MobileMenuPopup>
-        </StyledMobileMenu>
-    );
-};
-
-const StyledMobileMenu = styled.nav`
-    display: none;
-    @media ${theme.media.tablet} {
-        display: block;
+const DesktopMenu = styled.nav`
+    ul {
+        display: flex;
+        gap: 30px;
+        justify-content:center;
     }
+`
+
+
+
+// mobileMenu
+
+const MobileMenu = styled.nav`
 `
 
 const MobileMenuPopup = styled.div<{ isOpen: boolean }>`
@@ -116,6 +97,7 @@ const BurgerButton = styled.button<{ isOpen: boolean }>`
     }
 `
 
+// commonMenu
 
 const Link = styled.a`
     font-family: Josefin Sans, sans-serif;
@@ -182,3 +164,13 @@ const ListItem = styled.li`
 `
 
 
+
+export const S = {
+    DesktopMenu,
+    BurgerButton,
+    MobileMenu,
+    MobileMenuPopup,
+    Link,
+    ListItem,
+    Mask
+}

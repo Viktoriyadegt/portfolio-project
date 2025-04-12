@@ -34,11 +34,11 @@ const StyledPhoto = styled.img`
     width: 350px;
     height: 430px;
     object-fit: cover;
+    margin-right: 20px;
 
     @media ${theme.media.mobile} {
         width: 310px;
         height: 380px;
-        margin-right: 25px;
     }
 `
 
@@ -97,8 +97,7 @@ const TextContainer = styled.div`
 const PhotoWrapper = styled.div`
     position: relative;
     z-index: 0;
-    margin-top: 65px;
-
+    
     &::before {
         content: '';
         display: inline-block;
@@ -116,11 +115,13 @@ const PhotoWrapper = styled.div`
             width: 331px;
             height: 414px;
             top: -17px;
-            left: 20px;
+            left: 12px;
         }
     }
 
-
+    @media ${theme.media.mobile} {
+        margin-top: 65px;
+    }
 `
 
 

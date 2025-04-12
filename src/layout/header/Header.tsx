@@ -1,34 +1,42 @@
-import styled from "styled-components";
 import {Logo} from "../../components/logo/Logo";
 import {Container} from "../../components/Container";
 import {FlexContainer} from "../../components/FlexContainer";
-import {HeaderMenu} from "./headerMenu/HeaderMenu";
-import {MobileMenu} from "./mobileMenu/MobileMenu.tsx";
+import {DesktopMenu} from "./headerMenu/desktopMenu/DesktopMenu.tsx";
+import {MobileMenu} from "./headerMenu/mobileMenu/MobileMenu.tsx";
+import * as React from "react";
+import {S} from "./Header_Styles.ts"
+import {useEffect, useState} from "react";
 
 
 const menuItems: Array<string> = ['HOME', 'SKILLS', 'WORKS', 'TESTIMONY', 'CONTACTS']
 
-export const Header = () => {
+export const Header: React.FC = () => {
+
+    const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+    const referenceScreenWidth = 768
+
+    useEffect(() => {
+        const handleSetScreenWidth = () => setScreenWidth(window.innerWidth)
+        window.addEventListener("resize", handleSetScreenWidth);
+
+        return () => window.removeEventListener("resize", handleSetScreenWidth);
+    }, []);
 
     return (
-        <StyledHeader>
+        <S.Header>
             <Container>
                 <FlexContainer justify={"space-between"} align={"center"}>
                     <Logo/>
-                    <HeaderMenu items={menuItems}  />
-                    <MobileMenu items={menuItems}/>
+
+                    {screenWidth < referenceScreenWidth
+                        ? <MobileMenu items={menuItems}/>
+                        : <DesktopMenu items={menuItems}/>
+                    }
+
                 </FlexContainer>
             </Container>
-        </StyledHeader>
+        </S.Header>
     );
 };
 
-const StyledHeader = styled.header`
-    background-color: rgba(31, 31, 32, 0.9);
-    padding: 20px 0;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 99999;
-`
+

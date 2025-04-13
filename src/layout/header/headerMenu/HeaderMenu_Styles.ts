@@ -19,6 +19,7 @@ const MobileMenu = styled.nav`
 `
 
 const MobileMenuPopup = styled.div<{ isOpen: boolean }>`
+    display: none;
     position: fixed;
     top: 0;
     bottom: 0;
@@ -26,7 +27,7 @@ const MobileMenuPopup = styled.div<{ isOpen: boolean }>`
     right: 0;
     background: rgba(31, 31, 32, 0.9);
     z-index: 99999;
-    display: none;
+   
 
     ${props => props.isOpen && css<{ isOpen: boolean }>`
         display: flex;
@@ -40,6 +41,7 @@ const MobileMenuPopup = styled.div<{ isOpen: boolean }>`
         justify-content: center;
         flex-direction: column;
         align-items: center;
+        
     }
 `
 

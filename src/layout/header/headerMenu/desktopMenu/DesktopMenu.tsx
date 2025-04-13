@@ -8,7 +8,7 @@ type Props = {
 }
 
 
-export const DesktopMenu:React.FC<{items:Array<string>}> = ({items}: Props) => {
+export const DesktopMenu:React.FC<Props> = ({items}: Props) => {
     return (
         <S.DesktopMenu>
             <Menu items={items}/>

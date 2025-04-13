@@ -75,6 +75,7 @@ const TextContainer = styled.div`
 const PhotoWrapper = styled.div`
     position: relative;
     z-index: 0;
+    margin-top: 65px;
     
     &::before {
         content: '';

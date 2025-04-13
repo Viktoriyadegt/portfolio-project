@@ -1,38 +1,25 @@
-import styled from "styled-components";
-import {Link} from "../../../../components/Link.tsx";
+import {Link} from "../../../../components/Link.ts";
+import React from "react";
+import {S} from "./TabMenu_Styles.ts"
 
 type Props = {
     items: string[]
 }
 
 
-export const TabMenu = ({items}: Props) => {
+export const TabMenu: React.FC<Props> = ({items}: Props) => {
     return (
-        <StyledMenu>
+        <S.Menu>
             <ul>
                 {items.map((item, index) => {
-                    return <ListItem key={index}>
+                    return <S.ListItem key={index}>
                         <Link href="">{item}</Link>
-                    </ListItem>
+                    </S.ListItem>
                 })}
             </ul>
-        </StyledMenu>
+        </S.Menu>
     );
 };
 
-const StyledMenu = styled.nav`
-   
-    ul {
-        display: flex;
-        justify-content:space-between;
-        max-width: 352px;
-        width: 100%;
-        margin: 0 auto 40px;
-    }
-`
-
-const ListItem = styled.li`
-  
-`
 
 

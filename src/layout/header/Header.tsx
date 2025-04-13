@@ -1,6 +1,6 @@
 import {Logo} from "../../components/logo/Logo";
-import {Container} from "../../components/Container";
-import {FlexContainer} from "../../components/FlexContainer";
+import {Container} from "../../components/Container.ts";
+import {FlexContainer} from "../../components/FlexContainer.ts";
 import {DesktopMenu} from "./headerMenu/desktopMenu/DesktopMenu.tsx";
 import {MobileMenu} from "./headerMenu/mobileMenu/MobileMenu.tsx";
 import * as React from "react";

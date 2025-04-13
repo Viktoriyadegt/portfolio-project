@@ -1,15 +1,16 @@
-import styled from "styled-components";
-import {SectionTitle} from "../../../components/SectionTitle";
-import {FlexContainer} from "../../../components/FlexContainer";
+import {SectionTitle} from "../../../components/SectionTitle.ts";
+import {FlexContainer} from "../../../components/FlexContainer.ts";
 import {Slider} from "../../../components/slider/Slider";
 import {Icon} from "../../../components/icon/Icon";
-import {IconWrapper} from "../skills/skill/Skill.tsx";
-import {Container} from "../../../components/Container.tsx";
+import {Container} from "../../../components/Container.ts";
+import {IconWrapper} from "../skills/Skills_Styles.ts";
+import {S} from "./Testimony_Styles.ts"
+import React from "react";
 
 
-export const Testimony = () => {
+export const Testimony: React.FC = () => {
     return (
-        <StiledTestimony>
+        <S.Testimony>
             <Container>
                 <SectionTitle>Testimony</SectionTitle>
                 <FlexContainer direction={'column'} align={'center'}>
@@ -19,15 +20,7 @@ export const Testimony = () => {
                     <Slider/>
                 </FlexContainer>
             </Container>
-        </StiledTestimony>
+        </S.Testimony>
     );
 };
 
-const StiledTestimony = styled.section`
-    background-color: rgba(169, 152, 213, 0.77);
-    min-height: 50vh;
-
-    ${IconWrapper} {
-        margin: 32px 0 70px;
-    }
-`

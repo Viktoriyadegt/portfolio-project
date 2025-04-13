@@ -1,64 +1,24 @@
-import styled from "styled-components";
-import {SectionTitle} from "../../../components/SectionTitle";
-import {Button} from "../../../components/Button";
-import {Container} from "../../../components/Container.tsx";
-import {theme} from "../../../styles/Theme.ts";
+import {SectionTitle} from "../../../components/SectionTitle.ts";
+import {Button} from "../../../components/Button.ts";
+import {Container} from "../../../components/Container.ts";
+import {S} from "./Contact_Styles.ts"
+import React from "react";
 
 
-export const Contact = () => {
+export const Contact: React.FC = () => {
     return (
-        <StiledContact>
+        <S.Contact>
             <Container>
                 <SectionTitle>Contact</SectionTitle>
-                <StyledForm>
-                    <Field placeholder={'name'}/>
-                    <Field placeholder={'subject'}/>
-                    <Field placeholder={'message'} as={'textarea'}/>
+                <S.StyledForm>
+                    <S.Field placeholder={'name'}/>
+                    <S.Field placeholder={'subject'}/>
+                    <S.Field placeholder={'message'} as={'textarea'}/>
                     <Button>SEND MESSAGE</Button>
-                </StyledForm>
+                </S.StyledForm>
             </Container>
-        </StiledContact>
+        </S.Contact>
     );
 };
 
-const StiledContact = styled.section`
-   
-`
 
-const Field = styled.input`
-    width: 100%;
-    font-family: Poppins, sans-serif;
-    font-weight: 400;
-    font-size: 12px;
-    color: ${theme.colors.font};
-    letter-spacing: 0.05em;
-    background-color: ${theme.colors.secondaryBg};
-    border: 1px solid ${theme.colors.borderColor};
-    padding: 7px 15px;
-
-
-    &::placeholder {
-        color: ${theme.colors.plaseholderColor};
-        text-transform: capitalize;
-    }
-    
-
-    &:focus-visible{
-        outline: 1px solid ${theme.colors.borderColor};
-    }
-`
-const StyledForm = styled.form`
-    max-width: 540px;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 0 auto;
-    gap: 16px;
-
-    textarea {
-    resize: none;
-    height: 155px;
-}
-
-`

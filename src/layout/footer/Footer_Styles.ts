@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import {theme} from "../../styles/Theme.ts";
-import {Font} from "../../styles/Common.ts";
+import {font} from "../../styles/Common.ts";
 
 const Footer = styled.footer`
     background-color: ${theme.colors.primaryBg};
@@ -8,7 +8,7 @@ const Footer = styled.footer`
 `
 
 const Name = styled.span`
-    ${Font({family: `Josefin Sans, sans-serif`, Fmax: 22, Fmin: 16, weight: 700})}
+    ${font({family: `Josefin Sans, sans-serif`, Fmax: 22, Fmin: 16, weight: 700})}
     letter-spacing: 3px;
 `
 

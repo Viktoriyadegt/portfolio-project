@@ -1,9 +1,9 @@
 import styled from "styled-components";
 import {theme} from "../styles/Theme.ts";
-import {Font} from "../styles/Common.ts";
+import {font} from "../styles/Common.ts";
 
 export const SectionTitle = styled.h2`
-    ${Font({weight:600, Fmin:30, Fmax:36, family:`Josefin Sans, sans-serif`})}
+    ${font({weight:600, Fmin:30, Fmax:36, family:`Josefin Sans, sans-serif`})}
     text-align: center;
     letter-spacing: 5px;
     margin-bottom: 90px;

@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import {theme} from "../../../styles/Theme.ts";
-import {Font} from "../../../styles/Common.ts";
+import {font} from "../../../styles/Common.ts";
 
 const Main = styled.section`
     background-color: rgba(230, 227, 168, 0.76);
@@ -21,11 +21,15 @@ const StyledPhoto = styled.img`
 `
 
 const StyledMainTitle = styled.h1`
-    ${Font({Fmin: 20, Fmax: 27})}
+    ${font({Fmin: 20, Fmax: 27, weight:400})}
+
+    p {
+        display: none;
+    }
 `
 
 const StyledTitle = styled.h2`
-    ${Font({family: `'Josefin Sans', sans-serif`, Fmin: 30, Fmax: 50, weight: 700})}
+    ${font({family: `'Josefin Sans', sans-serif`, Fmin: 30, Fmax: 50, weight: 700})}
     letter-spacing: 0.05em;
     margin: 10px 0;
     text-align: start;
@@ -45,7 +49,7 @@ const StyledTitle = styled.h2`
             background-color: ${theme.colors.accent};
             position: absolute;
             bottom: 0;
-            transform: translateY(3px);
+           
             z-index: -1;
 
             @media ${theme.media.mobile} {
@@ -70,6 +74,7 @@ const TextContainer = styled.div`
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    justify-content: start;
 `
 
 const PhotoWrapper = styled.div`

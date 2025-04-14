@@ -2,7 +2,7 @@ import styled from "styled-components";
 import {theme} from "../../../styles/Theme.ts";
 
 const Contact = styled.section`
-   
+   position: relative;
 `
 
 const Field = styled.input`

@@ -8,7 +8,7 @@ import React from "react";
 
 export const Slogan: React.FC = () => {
     return (
-        <StiledSlogan>
+        <StiledSlogan id={"slogan"}>
             <Container>
                 <FlexContainer direction={'column'} align={'center'}>
                     <SectionTitle>I Am Available For Freelance</SectionTitle>

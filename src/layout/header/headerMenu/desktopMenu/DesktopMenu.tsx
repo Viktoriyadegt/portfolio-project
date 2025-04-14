@@ -2,9 +2,8 @@ import {Menu} from "../menu/Menu.tsx";
 import {S} from "../HeaderMenu_Styles.ts";
 import React from "react";
 
-
 type Props = {
-    items: Array<string>
+    items: Array<{ title:string; href:string }>
 }
 
 

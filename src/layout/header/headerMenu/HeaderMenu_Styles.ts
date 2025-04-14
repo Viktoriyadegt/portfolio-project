@@ -1,5 +1,6 @@
 import styled, {css} from "styled-components";
 import {theme} from "../../../styles/Theme.ts";
+import {Link} from "react-scroll";
 
 // desktopMenu
 
@@ -101,12 +102,6 @@ const BurgerButton = styled.button<{ isOpen: boolean }>`
 
 // commonMenu
 
-const Link = styled.a`
-    font-family: Josefin Sans, sans-serif;
-    font-size: 25px;
-    font-weight: 400;
-
-`
 
 const Mask = styled.span`
     position: absolute;
@@ -130,6 +125,15 @@ const Mask = styled.span`
 const ListItem = styled.li`
     position: relative;
 
+    
+`
+
+
+const NavLink = styled(Link)`
+    font-family: Josefin Sans, sans-serif;
+    font-size: 25px;
+    font-weight: 400;
+
     &::before {
         content: '';
         display: inline-block;
@@ -147,7 +151,7 @@ const ListItem = styled.li`
     }
 
 
-    &:hover {
+    &:hover, &.active {
 
 
         &::before {
@@ -163,6 +167,7 @@ const ListItem = styled.li`
             }
         }
     }
+
 `
 
 
@@ -172,7 +177,7 @@ export const S = {
     BurgerButton,
     MobileMenu,
     MobileMenuPopup,
-    Link,
+    NavLink,
     ListItem,
     Mask
 }

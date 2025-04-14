@@ -3,7 +3,7 @@ import {S} from "./../HeaderMenu_Styles.ts"
 import React, {useState} from "react";
 
 type Props = {
-    items: Array<string>
+    items: Array<{ title:string; href:string }>
 }
 
 

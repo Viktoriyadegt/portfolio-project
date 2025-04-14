@@ -42,7 +42,7 @@ const SkillsState = [
 
 export const Skills: React.FC = () => {
     return (
-        <S.Skills>
+        <S.Skills id={'skills'}>
             <Container>
                 <SectionTitle>My Skills</SectionTitle>
                 <FlexContainer justify={'space-between'} wrap="wrap">

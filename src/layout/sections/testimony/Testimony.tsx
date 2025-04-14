@@ -10,7 +10,7 @@ import React from "react";
 
 export const Testimony: React.FC = () => {
     return (
-        <S.Testimony>
+        <S.Testimony id={"testimony"}>
             <Container>
                 <SectionTitle>Testimony</SectionTitle>
                 <FlexContainer direction={'column'} align={'center'}>

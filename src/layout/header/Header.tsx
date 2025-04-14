@@ -8,7 +8,28 @@ import {S} from "./Header_Styles.ts"
 import {useEffect, useState} from "react";
 
 
-const menuItems: Array<string> = ['HOME', 'SKILLS', 'WORKS', 'TESTIMONY', 'CONTACTS']
+const items: Array<{ title: string; href: string }> = [
+    {
+        title: 'HOME',
+        href: 'home'
+    },
+    {
+        title: 'SKILLS',
+        href: 'skills'
+    },
+    {
+        title: 'WORKS',
+        href: 'works'
+    },
+    {
+        title: 'TESTIMONY',
+        href: 'testimony'
+    },
+    {
+        title: 'CONTACTS',
+        href: 'contact'
+    }
+]
 
 export const Header: React.FC = () => {
 
@@ -29,8 +50,8 @@ export const Header: React.FC = () => {
                     <Logo/>
 
                     {screenWidth < referenceScreenWidth
-                        ? <MobileMenu items={menuItems}/>
-                        : <DesktopMenu items={menuItems}/>
+                        ? <MobileMenu items={items}/>
+                        : <DesktopMenu items={items}/>
                     }
 
                 </FlexContainer>

@@ -5,7 +5,8 @@ export const theme= {
         accent: '#7572D5',
         font: '#FFFFFF',
         borderColor: '#4A4A4A',
-        plaseholderColor: '#495057'
+        plaseholderColor: '#495057',
+        worksCards: '#000000',
     },
 
     media: {
